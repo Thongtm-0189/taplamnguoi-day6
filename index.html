@@ -11,8 +11,8 @@
     <!-- <audio id="audio" src="./countdown.mp3" preload="auto" controls="none"></audio> -->
     <div class="content" id="content">
         <h1>CountDown</h1>  
-        <input type="text" class="input" name="" id="minutes" placeholder="Minutes">
-        <input type="text" class="input" name="" id="seconds" placeholder="Seconds">
+        <input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' class="input" name="" id="minutes" placeholder="Minutes">
+        <input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' calss="input" name="" id="seconds" placeholder="Seconds">
         <input type="submit" class="input" value="start" id="start" onclick="playSound()">
         <p id="text"></p>
         
