@@ -22,7 +22,7 @@ function playSound(){
     const myCountDown = setInterval(countDown,1000)
     audio.play();
     newDiv.classList.add("non-poiter")
-    if(seconds.value > 60|| seconds.value<0 || minutes.value<0 || (minutes.value==0 && seconds.value==0)){
+    if(typeof(seconds.value)!="number" || typeof(minutes.value)!="number" || seconds.value > 60|| seconds.value<0 || minutes.value<0 || (minutes.value==0 && seconds.value==0)){
         clearInterval(myCountDown)
         audio.pause()
         alert("ERROR seconds or minutes")
